@@ -438,9 +438,9 @@
 
         document.getElementById('copyItineraryBtn').addEventListener('click', () => {
             let total = plans.reduce((acc, p) => acc + (parseInt(p.cost, 10) || 0), 0);
-            let text = "✈️ 내 여행 일정표 (Travel Itinerary)
+            let text = `✈️ 내 여행 일정표 (Travel Itinerary)
 ---------------------------------
-";
+`;
             plans.forEach(p => {
                 text += `[${p.day} ${p.time}] ${p.place} (${(parseInt(p.cost, 10)||0).toLocaleString()}원) ${p.memo ? '- ' + p.memo : ''}
 `;
