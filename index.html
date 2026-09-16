@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>여행 일정 & 예산 타임라인 플래너 | 100% 로컬 동선 플래너 (Travel Itinerary)</title>
+    <meta content="일자별 방문지 동선 타임라인과 경비 정산 플래너. 오프라인 작동, A4 일정표 인쇄 및 PDF 다운로드 무료." name="description"/>
+    <link href="https://travel.enjoy-onepage.com/" rel="canonical"/>
+    <meta content="website" property="og:type"/>
+    <meta property="og:locale" content="ko_KR">
+    <meta content="https://travel.enjoy-onepage.com/" property="og:url"/>
+    <meta content="Travel Itinerary - 여행 일정 & 예산 타임라인 플래너" property="og:title"/>
+    <meta content="회원가입 없이 일자별 동선과 여행 경비를 정리하고 A4로 즉시 인쇄하는 여행 플래너입니다." property="og:description"/>
+    <meta content="https://travel.enjoy-onepage.com/og-image.png" property="og:image"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Travel Itinerary - 여행 일정 & 예산 타임라인 플래너" name="twitter:title"/>
+    <meta content="회원가입 없이 일자별 동선과 여행 경비를 정리하고 A4로 즉시 인쇄하는 여행 플래너입니다." name="twitter:description"/>
+    <meta content="https://travel.enjoy-onepage.com/og-image.png" name="twitter:image"/>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://travel.enjoy-onepage.com/#webapp",
+          "name": "Travel Itinerary - 여행 일정 & 예산 타임라인 플래너",
+          "url": "https://travel.enjoy-onepage.com/",
+          "applicationCategory": "TravelApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "일자별 방문지 동선 타임라인과 경비 정산 플래너. 오프라인 작동, A4 일정표 인쇄 무료.",
+          "image": "https://travel.enjoy-onepage.com/og-image.png",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://travel.enjoy-onepage.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "해외여행 중 비행기 안이나 데이터가 안 터지는 곳에서도 일정표를 볼 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, Travel Itinerary는 100% 로컬스토리지에 저장되므로 인터넷 연결이 없는 비행기 안이나 해외 오프라인 환경에서도 언제든지 작성한 일정표와 경비 내역을 열람할 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "작성한 일정표를 종이나 PDF로 인쇄할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 상단의 [A4 일정표 인쇄] 버튼을 누르면 불필요한 입력창과 광고가 제거된 깔끔한 A4 규격 타임라인 양식으로 브라우저 인쇄 및 PDF 저장이 즉시 가능합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "트리플이나 노션보다 간편한 점은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "복잡한 회원가입, 앱 설치, 친구 초대 절차 없이 링크에 접속하자마자 1초 만에 일자별 장소와 예산을 채워 넣을 수 있어 초간단 여행 계획에 최적화되어 있습니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style id="layout-shield">
+      html, body { max-width: 100%; overflow-x: hidden; }
+      .manual-ad-box { width: 100%; max-width: 960px; margin-left: auto; margin-right: auto; text-align: center; overflow: hidden; }
+      .manual-ad-box ins { max-width: 100% !important; overflow: hidden !important; }
+      :focus-visible { outline: 2px solid #3b82f6 !important; outline-offset: 2px !important; }
+      input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid #2563eb !important; outline-offset: 1px !important; }
+      @media print {
+        header, footer, .ad-top-banner, .ad-bottom-banner, #inputPanel, button, #toastNotification { display: none !important; }
+        #timelineCard { border: none !important; box-shadow: none !important; width: 100% !important; }
+      }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+    <div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 8px auto 16px; text-align: center;">
+        <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="horizontal" data-ad-slot="3824727725" data-full-width-responsive="true" style="display:inline-block;width:100%;height:60px;"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-cyan-600 transition">
+                <span class="w-8 h-8 rounded-lg bg-cyan-600 text-white flex items-center justify-center font-black text-sm shadow-sm"><i class="fa-solid fa-plane-departure"></i></span>
+                <span>Travel Itinerary</span>
+            </a>
+            <div class="flex items-center gap-2">
+                <button id="printBtn" class="px-3 py-1.5 text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition" aria-label="A4 인쇄">
+                    <i class="fa-solid fa-print mr-1"></i>A4 인쇄/PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-4 pt-6 pb-2 w-full">
+        <div class="border-b border-slate-200 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-100 text-cyan-800 mb-2">
+                    <i class="fa-solid fa-map-location-dot text-cyan-600"></i><span>100% 로컬퍼스트 여행 동선 & 예산 플래너</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    여행 일정 & 예산 타임라인 플래너
+                </h1>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">
+                    일자별 방문지와 시간, 예산을 정리하고 오프라인에서 조회하거나 A4로 인쇄하세요.
+                </p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-3 sm:p-4 text-center min-w-[150px] shadow-sm">
+                <div class="text-[11px] font-bold text-slate-500">예상 총 여행 경비</div>
+                <div class="text-2xl font-black text-cyan-600 mt-0.5" id="totalExpenseText">0원</div>
+                <div class="text-[11px] text-slate-400 mt-0.5" id="tripDaysSub">총 0개 장소 계획됨</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspace: 1:1 Left Inputs, Right Timeline Card (Sticky) -->
+    <main class="max-w-4xl mx-auto px-4 py-4 w-full flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Left 5 cols: Plan Inputs -->
+            <section id="inputPanel" class="lg:col-span-5 bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-4">
+                <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-cyan-600"></i>방문 일정 추가
+                </h2>
+
+                <form id="planForm" class="space-y-3">
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label for="planDay" class="block text-xs font-bold text-slate-700 mb-1">일차 *</label>
+                            <select id="planDay" class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium text-slate-900" aria-label="일차 선택">
+                                <option value="Day 1">Day 1 (1일차)</option>
+                                <option value="Day 2">Day 2 (2일차)</option>
+                                <option value="Day 3">Day 3 (3일차)</option>
+                                <option value="Day 4">Day 4 (4일차)</option>
+                                <option value="Day 5">Day 5 (5일차)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="planTime" class="block text-xs font-bold text-slate-700 mb-1">시간 *</label>
+                            <input type="time" id="planTime" value="10:00" required class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium text-slate-900" aria-label="방문 시간">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="planPlace" class="block text-xs font-bold text-slate-700 mb-1">장소 / 활동명 *</label>
+                        <input type="text" id="planPlace" required placeholder="예: 센소지 신사 & 나카미세도리" class="w-full text-base sm:text-sm px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium text-slate-900" aria-label="장소">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label for="planCost" class="block text-xs font-bold text-slate-700 mb-1">예상 비용(원)</label>
+                            <input type="number" id="planCost" min="0" step="1000" placeholder="예: 25000" class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium text-slate-900" aria-label="예상 비용">
+                        </div>
+                        <div>
+                            <label for="planCategory" class="block text-xs font-bold text-slate-700 mb-1">구분</label>
+                            <select id="planCategory" class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium text-slate-900" aria-label="구분">
+                                <option value="관광">🏯 관광</option>
+                                <option value="식사">🍜 식사</option>
+                                <option value="이동">🚅 이동</option>
+                                <option value="숙소">🏨 숙소</option>
+                                <option value="쇼핑">🛍️ 쇼핑</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="planMemo" class="block text-xs font-bold text-slate-700 mb-1">메모 / 꿀팁 (선택)</label>
+                        <input type="text" id="planMemo" placeholder="예: 말차 아이스크림 먹기, 1번 출구" class="w-full text-base sm:text-sm px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium text-slate-900" aria-label="메모">
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-sm rounded-xl shadow-md transition flex items-center justify-center gap-2" aria-label="일정 추가">
+                        <i class="fa-solid fa-plus"></i><span>일정에 추가하기</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Right 7 cols: Timeline Output Card -->
+            <section class="lg:col-span-7 space-y-4">
+                <div id="timelineCard" class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-route text-cyan-600"></i>여행 일정 타임라인
+                        </h3>
+                        <button id="copyItineraryBtn" class="text-xs font-bold text-cyan-600 hover:text-cyan-800 flex items-center gap-1" aria-label="일정 복사">
+                            <i class="fa-regular fa-copy"></i><span>일정 복사</span>
+                        </button>
+                    </div>
+
+                    <div id="timelineContainer" class="space-y-4 max-h-[520px] overflow-y-auto pr-1">
+                        <!-- Dynamic Day groups and items -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Toast -->
+    <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900/90 text-white text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xl z-50 transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-cyan-400"></i><span id="toastMessage">안내 메시지</span>
+    </div>
+
+    <!-- 📖 E-E-A-T Guide Section (Q1~Q7) -->
+    <section class="max-w-4xl mx-auto my-8 px-4">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-100 text-cyan-700 mb-2">
+            <span>⚖️ 2026년 한국관광공사 스마트 여행 설계 표준</span>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 tracking-tight">
+            여행 동선 최적화 및 경비 절약 플래닝 가이드
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            본 도구는 한국관광공사의 여행 계획 가이드라인 및 구역별 이동 동선 군집화(Clustering) 알고리즘에 기반합니다.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">핵심 산출 공식 (Formula & Budget)</div>
+          <div class="text-sm sm:text-base font-extrabold text-slate-900 font-mono leading-relaxed">
+            총 여행 경비 = ∑(항목별 예상 비용) | 1일 권장 방문지 = 최대 3~4곳 이내 (이동 피로도 방어)
+          </div>
+        </div>
+
+        <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">💡 실전 계산 사례 (Case Study)</div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            예를 들어, 3박 4일 도쿄 여행에서 하루에 관광지 3곳, 식사 3회, 교통비 등을 1일 단위로 분할하여 기록하면 예상 총액 140만 원 중 식비와 숙박비의 비중을 한눈에 파악하여 예산 초과를 사전에 방지할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><span>❓</span> 자주 묻는 질문 (FAQ)</h4>
+          <details class="group border border-slate-200 rounded-xl p-4">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
+              <span>Q. 해외여행 중 비행기 안이나 데이터가 안 터지는 곳에서도 일정표를 볼 수 있나요?</span>
+              <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+              네, Travel Itinerary는 100% 로컬스토리지에 저장되므로 인터넷 연결이 없는 비행기 안이나 해외 오프라인 환경에서도 언제든지 작성한 일정표와 경비 내역을 열람할 수 있습니다.
+            </div>
+          </details>
+          <details class="group border border-slate-200 rounded-xl p-4">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
+              <span>Q. 작성한 일정표를 종이나 PDF로 인쇄할 수 있나요?</span>
+              <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+              네, 상단의 [A4 일정표 인쇄] 버튼을 누르면 불필요한 입력창과 광고가 제거된 깔끔한 A4 규격 타임라인 양식으로 브라우저 인쇄 및 PDF 저장이 즉시 가능합니다.
+            </div>
+          </details>
+          <details class="group border border-slate-200 rounded-xl p-4">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
+              <span>Q. 트리플이나 노션보다 간편한 점은 무엇인가요?</span>
+              <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+              복잡한 회원가입, 앱 설치, 친구 초대 절차 없이 링크에 접속하자마자 1초 만에 일자별 장소와 예산을 채워 넣을 수 있어 초간단 여행 계획에 최적화되어 있습니다.
+            </div>
+          </details>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <span>📋</span> 반드시 챙겨야 할 실전 체크리스트
+          </h4>
+          <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
+            <li class="flex items-start gap-2"><span class="text-cyan-600 font-bold">✓</span><span>같은 권역(지하철 노선 동일 구역)의 방문지를 묶어 불필요한 왕복 이동 시간을 줄이세요.</span></li>
+            <li class="flex items-start gap-2"><span class="text-cyan-600 font-bold">✓</span><span>식당 예약 및 박물관 휴관일을 사전 확인하여 헛걸음을 방지하세요.</span></li>
+            <li class="flex items-start gap-2"><span class="text-cyan-600 font-bold">✓</span><span>출국 전 [A4 인쇄]로 종이 출력물 1부를 여권 지갑에 보관하여 스마트폰 방전에 대비하세요.</span></li>
+          </ul>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-500 leading-relaxed">
+          <strong>⚠️ 면책 고지:</strong> 본 여행 플래너는 개인 일정 조율을 위한 브라우저 도구입니다. 항공편 지연, 현지 시설의 갑작스러운 휴무 및 환율 변동으로 인한 경비 오차에 대해 책임지지 않습니다.
+        </div>
+      </div>
+    </section>
+
+    <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; text-align: center;">
+        <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="auto" data-ad-slot="3416334507" data-full-width-responsive="true" style="display:block"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer class="border-t border-slate-200 bg-white py-8 px-4 text-center">
+        <div class="max-w-4xl mx-auto text-xs text-slate-500 space-y-3">
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-medium">
+                <a class="hover:text-cyan-600 transition" href="/privacy.html">개인정보처리방침</a>
+                <span>·</span>
+                <a class="hover:text-cyan-600 transition" href="/terms.html">이용약관</a>
+            </div>
+            <p>100% 무서버 클라이언트 사이드 연산 | 데이터 외부 전송 제로 보증</p>
+            <p class="text-[11px] text-slate-400">© 2026 Travel Itinerary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'enjoy_travel_itinerary_v1';
+        let plans = [];
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            if (toast && toastMsg) {
+                toastMsg.innerText = msg;
+                toast.classList.remove('opacity-0', 'pointer-events-none');
+                setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2200);
+            }
+        }
+
+        function loadData() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                plans = raw ? JSON.parse(raw) : [
+                    { id: 'p1', day: 'Day 1', time: '11:00', place: '공항 도착 및 숙소 체크인', cost: 15000, category: '이동', memo: '교통카드 충전' },
+                    { id: 'p2', day: 'Day 1', time: '13:00', place: '점심 식사 (라멘 전문점)', cost: 20000, category: '식사', memo: '현금 결제 준비' }
+                ];
+            } catch(e) {
+                plans = [];
+            }
+            renderTimeline();
+        }
+
+        function saveData() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(plans));
+            } catch(e) {}
+            renderTimeline();
+        }
+
+        function renderTimeline() {
+            const container = document.getElementById('timelineContainer');
+            container.innerHTML = '';
+
+            let totalCost = 0;
+            const groups = {};
+
+            plans.forEach(p => {
+                totalCost += (parseInt(p.cost, 10) || 0);
+                if (!groups[p.day]) groups[p.day] = [];
+                groups[p.day].push(p);
+            });
+
+            document.getElementById('totalExpenseText').innerText = `${totalCost.toLocaleString()}원`;
+            document.getElementById('tripDaysSub').innerText = `총 ${plans.length}개 장소 계획됨`;
+
+            if (plans.length === 0) {
+                container.innerHTML = '<div class="text-center py-10 text-slate-400 text-xs">일정이 비어 있습니다. 왼쪽에서 장소를 추가해보세요!</div>';
+                return;
+            }
+
+            Object.keys(groups).sort().forEach(day => {
+                const dayBox = document.createElement('div');
+                dayBox.className = 'border border-slate-200 rounded-xl overflow-hidden';
+                
+                let itemsHtml = '';
+                groups[day].sort((a,b) => a.time.localeCompare(b.time)).forEach(item => {
+                    itemsHtml += `
+                        <div class="p-3 bg-white border-b border-slate-100 last:border-b-0 flex items-start justify-between gap-3 text-xs">
+                            <div class="flex items-start gap-2.5">
+                                <span class="font-mono font-bold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded">${item.time}</span>
+                                <div>
+                                    <div class="font-bold text-slate-900">${item.place} <span class="text-[10px] text-slate-400 font-normal">[${item.category}]</span></div>
+                                    ${item.memo ? `<div class="text-[11px] text-slate-500 mt-0.5">💡 ${item.memo}</div>` : ''}
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-extrabold text-slate-800">${(parseInt(item.cost, 10) || 0).toLocaleString()}원</span>
+                                <button onclick="deletePlan('${item.id}')" class="text-slate-300 hover:text-rose-600 transition"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                dayBox.innerHTML = `
+                    <div class="bg-cyan-50/70 px-4 py-2 text-xs font-black text-cyan-900 flex justify-between">
+                        <span>🗓️ ${day}</span>
+                        <span>${groups[day].length}개 일정</span>
+                    </div>
+                    <div class="divide-y divide-slate-100">${itemsHtml}</div>
+                `;
+                container.appendChild(dayBox);
+            });
+        }
+
+        window.deletePlan = function(id) {
+            plans = plans.filter(p => p.id !== id);
+            saveData();
+            showToast("일정이 삭제되었습니다.");
+        };
+
+        document.getElementById('planForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const day = document.getElementById('planDay').value;
+            const time = document.getElementById('planTime').value;
+            const place = document.getElementById('planPlace').value.trim();
+            const cost = parseInt(document.getElementById('planCost').value, 10) || 0;
+            const category = document.getElementById('planCategory').value;
+            const memo = document.getElementById('planMemo').value.trim();
+
+            if (!place) return;
+
+            plans.push({
+                id: 'plan_' + Date.now(),
+                day,
+                time,
+                place,
+                cost,
+                category,
+                memo
+            });
+            saveData();
+
+            document.getElementById('planPlace').value = '';
+            document.getElementById('planCost').value = '';
+            document.getElementById('planMemo').value = '';
+            showToast("새 일정이 추가되었습니다!");
+        });
+
+        document.getElementById('printBtn').addEventListener('click', () => {
+            window.print();
+        });
+
+        document.getElementById('copyItineraryBtn').addEventListener('click', () => {
+            let total = plans.reduce((acc, p) => acc + (parseInt(p.cost, 10) || 0), 0);
+            let text = "✈️ 내 여행 일정표 (Travel Itinerary)
+---------------------------------
+";
+            plans.forEach(p => {
+                text += `[${p.day} ${p.time}] ${p.place} (${(parseInt(p.cost, 10)||0).toLocaleString()}원) ${p.memo ? '- ' + p.memo : ''}
+`;
+            });
+            text += `
+총 예상 경비: ${total.toLocaleString()}원
+👉 바로가기: https://travel.enjoy-onepage.com/`;
+
+            navigator.clipboard.writeText(text).then(() => showToast("여행 일정이 복사되었습니다."));
+        });
+
+        loadData();
+    </script>
+</body>
+</html>
