@@ -398,7 +398,7 @@ class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; mar
             const toast = document.getElementById('toastNotification');
             const toastMsg = document.getElementById('toastMessage');
             if (toast && toastMsg) {
-                toastMsg.innerText = msg;
+                toastMsg.textContent = msg;
                 toast.classList.remove('opacity-0', 'pointer-events-none');
                 setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2200);
             }
