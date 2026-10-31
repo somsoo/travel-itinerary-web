@@ -38,7 +38,7 @@
           "applicationCategory": "TravelApplication",
           "operatingSystem": "All",
           "browserRequirements": "Requires JavaScript. Requires HTML5.",
-          "description": "일자별 방문지 동선 타임라인과 경비 정산 플래너. 오프라인 작동, A4 일정표 인쇄 무료.",
+          "description": "일자별 방문지 타임라인과 예상 경비 합계를 정리하는 여행 플래너. A4 일정표 인쇄·PDF 저장 무료.",
           "image": "https://travel.enjoy-onepage.com/og-image.png",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
         },
@@ -51,7 +51,7 @@
               "name": "해외여행 중 비행기 안이나 데이터가 안 터지는 곳에서도 일정표를 볼 수 있나요?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "네, Travel Itinerary는 로컬스토리지에 저장되므로 인터넷 연결이 없는 비행기 안이나 해외 오프라인 환경에서도 언제든지 작성한 일정표와 경비 내역을 열람할 수 있습니다."
+                "text": "이미 열어 둔 탭에서는 인터넷이 끊겨도 일정표를 볼 수 있습니다. 하지만 오프라인에서 페이지를 새로 여는 기능은 없으니, 출발 전에 인쇄 버튼으로 PDF를 저장해 두세요."
               }
             },
             {
@@ -67,7 +67,7 @@
               "name": "트리플이나 노션보다 간편한 점은 무엇인가요?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "복잡한 회원가입, 앱 설치, 친구 초대 절차 없이 링크에 접속하자마자 1초 만에 일자별 장소와 예산을 채워 넣을 수 있어 초간단 여행 계획에 최적화되어 있습니다."
+                "text": "회원가입이나 앱 설치 없이 바로 쓸 수 있습니다. 대신 지도, 동행자 공유, 여러 기기 동기화 기능은 없습니다."
               }
             }
           ]
@@ -156,7 +156,7 @@
                     여행 일정 & 예산 타임라인 플래너
                 </h1>
                 <p class="text-slate-600 text-xs sm:text-sm mt-1">
-                    일자별 방문지와 시간, 예산을 정리하고 오프라인에서 조회하거나 A4로 인쇄하세요.
+                    일자별 방문지와 시간, 예산을 정리하고 A4로 인쇄하거나 PDF로 저장하세요.
                 </p>
             </div>
             <div class="bg-white border border-slate-200 rounded-2xl p-3 sm:p-4 text-center min-w-[150px] shadow-sm">
@@ -264,44 +264,33 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
         <div class="border-b border-slate-200 pb-4">
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-100 text-cyan-700 mb-2">
-            <span>⚖️ 2026년 한국관광공사 스마트 여행 설계 표준</span>
+            <span>🧳 사용 안내</span>
           </div>
           <h3 class="text-xl font-black text-slate-900 tracking-tight">
-            여행 동선 최적화 및 경비 절약 플래닝 가이드
+            여행 일정과 경비 정리하는 법
           </h3>
           <p class="text-xs sm:text-sm text-slate-600 mt-1">
-            본 도구는 한국관광공사의 여행 계획 가이드라인 및 구역별 이동 동선 군집화(Clustering) 알고리즘에 기반합니다.
+            일차(Day 1~5), 시간, 장소, 예상 비용, 구분(관광·식사·이동·숙소·쇼핑)을 넣으면 일차별 타임라인과 예상 총경비를 보여 줍니다. 동선을 자동으로 짜 주거나 지도를 보여 주지는 않습니다.
           </p>
         </div>
 
         <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">핵심 산출 공식 (Formula & Budget)</div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">경비 계산</div>
           <div class="text-sm sm:text-base font-extrabold text-slate-900 font-mono leading-relaxed">
-            총 여행 경비 = ∑(항목별 예상 비용) | 1일 권장 방문지 = 최대 3~4곳 이내 (이동 피로도 방어)
+            예상 총경비 = 일정에 넣은 항목별 예상 비용의 합
           </div>
         </div>
 
         <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
-          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">💡 실전 계산 사례 (Case Study)</div>
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">💡 쓰는 예</div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-            예를 들어, 3박 4일 도쿄 여행에서 하루에 관광지 3곳, 식사 3회, 교통비 등을 1일 단위로 분할하여 기록하면 예상 총액 140만 원 중 식비와 숙박비의 비중을 한눈에 파악하여 예산 초과를 사전에 방지할 수 있습니다.
+            예를 들어, 3박 4일 도쿄 여행이라면 Day 1~4에 시간순으로 관광지, 식사, 이동을 넣고 항목마다 예상 비용을 적습니다. 위쪽의 예상 총경비가 예산을 넘으면 비싼 항목부터 조정하세요. 식비·숙박비처럼 구분별 합계는 따로 보여 주지 않습니다.
           </p>
         </div>
 
         <div class="space-y-3">
           <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><span>❓</span> 자주 묻는 질문 (FAQ)</h4>
           
-    <!-- 심층 가이드북 바로가기 (4-1-4 헌법 준수) -->
-    <div class="mt-8 mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full mb-2">2026 실무 가이드</span>
-        <h3 class="text-lg font-bold text-gray-900">공식 기준과 상세 산식이 궁금하신가요?</h3>
-        <p class="text-xs text-gray-600 mt-1">여행 일정 & 예산 타임라인 플래너의 최신 법정 고시, 감면 혜택, 실무 체크리스트를 확인해보세요.</p>
-      </div>
-      <a href="/guides/guide.html" class="whitespace-nowrap px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 text-xs shrink-0">
-        심층 가이드북 읽기 &rarr;
-      </a>
-    </div>
 
     <details class="group border border-slate-200 rounded-xl p-4">
             <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
@@ -309,7 +298,7 @@
               <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
             </summary>
             <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
-              네, Travel Itinerary는 로컬스토리지에 저장되므로 인터넷 연결이 없는 비행기 안이나 해외 오프라인 환경에서도 언제든지 작성한 일정표와 경비 내역을 열람할 수 있습니다.
+              이미 열어 둔 탭에서는 인터넷이 끊겨도 일정표를 볼 수 있습니다. 하지만 오프라인에서 페이지를 새로 여는 기능은 없으니, 출발 전에 인쇄 버튼으로 PDF를 저장해 두세요.
             </div>
           </details>
           <details class="group border border-slate-200 rounded-xl p-4">
@@ -327,7 +316,7 @@
               <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
             </summary>
             <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
-              복잡한 회원가입, 앱 설치, 친구 초대 절차 없이 링크에 접속하자마자 1초 만에 일자별 장소와 예산을 채워 넣을 수 있어 초간단 여행 계획에 최적화되어 있습니다.
+              회원가입이나 앱 설치 없이 바로 쓸 수 있습니다. 대신 지도, 동행자 공유, 여러 기기 동기화 기능은 없습니다.
             </div>
           </details>
         </div>
@@ -369,7 +358,7 @@ class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; mar
                 <span>·</span>
                 <a class="hover:text-cyan-600 transition" href="/terms.html">이용약관</a>
             </div>
-            <p>100% 무서버 클라이언트 사이드 연산 | 데이터 외부 전송 제로 보증</p>
+            <p>입력한 내용은 이 브라우저에만 저장되고 서버로 보내지 않습니다.</p>
             <p class="text-[11px] text-slate-400">© 2026 Travel Itinerary. All rights reserved.</p>
         </div>
     </footer>
